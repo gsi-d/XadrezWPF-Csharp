@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +57,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Bispo.cs" />
+    <Compile Include="Model\Cavalo.cs" />
+    <Compile Include="Model\Peao.cs" />
+    <Compile Include="Model\Rainha.cs" />
+    <Compile Include="Model\Rei.cs" />
+    <Compile Include="Model\Torre.cs" />
+    <Compile Include="ViewModel\VMTabuleiro.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +78,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Peca.cs" />
+    <Compile Include="Model\Tabuleiro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +104,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\peaoGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\peaoBege.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\bispoGray.png" />
+    <Resource Include="Pictures\cavaloBege.png" />
+    <Resource Include="Pictures\cavaloGray.png" />
+    <Resource Include="Pictures\rainhaBege.png" />
+    <Resource Include="Pictures\rainhaGray.png" />
+    <Resource Include="Pictures\reiBege.png" />
+    <Resource Include="Pictures\reiGray.png" />
+    <Resource Include="Pictures\torreBege.png" />
+    <Resource Include="Pictures\torreGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\bispoBege.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,15 @@
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\bin\Debug\XadrezWPFCsharp.exe.config
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\bin\Debug\XadrezWPFCsharp.exe
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\bin\Debug\XadrezWPFCsharp.pdb
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\MainWindow.g.cs
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\App.g.cs
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp_MarkupCompile.cache
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp_MarkupCompile.lref
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\MainWindow.baml
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp.g.resources
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp.Properties.Resources.resources
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp.csproj.GenerateResource.cache
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp.csproj.CoreCompileInputs.cache
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp.exe
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp.pdb
+C:\Users\vlnote51\Desktop\Guilherme\XadrezWPFCsharp\XadrezWPFCsharp\obj\Debug\XadrezWPFCsharp.csproj.AssemblyReference.cache
