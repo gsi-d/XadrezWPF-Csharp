@@ -30,6 +30,7 @@ namespace XadrezWPFCsharp
         Peca pecaSelecionada = new Peca();
         Peca pecaDestino = new Peca();
         int contadorPecas = 0;
+        bool inicio = true;
 
         int sizeTabuleiro = 48;
         BitmapImage peaoGray = new BitmapImage(new Uri("Pictures/peaoGray.png", UriKind.Relative));
@@ -104,9 +105,13 @@ namespace XadrezWPFCsharp
 
         public void PosicionarPecas(Canvas canvas)
         {
-            AtribuiIcones();
+            
             try
             {
+                if (inicio)
+                {
+                    AtribuiIcones();
+                }
                 foreach (Peca peca in pecas)
                 {
                     contadorPecas++;
@@ -350,6 +355,7 @@ namespace XadrezWPFCsharp
                     Canvas.SetTop(peca.UiElement, peca.Posicao.Y);
                     Canvas.SetLeft(peca.UiElement, peca.Posicao.X);
                 }
+                inicio = false;
                 
             }
             catch (Exception ex)
@@ -382,17 +388,15 @@ namespace XadrezWPFCsharp
                 {
                     for(int i = 0; i < pecas.Count; i++)
                     {
+                        if (pecaSelecionada.Posicao == pecas[i].Posicao)
+                        {
+                            pecas[i].Posicao = pecaRecuperada.Posicao;
+                        }
                         if (pecaRecuperada.Posicao == pecas[i].Posicao)
                         {
-                            pecas[i].Cor = /*pecaSelecionada.Cor;
-                            pecas[i].Movimentos = pecaSelecionada.Movimentos;
-                            pecas[i].Nome = pecaSelecionada.Nome;
                             pecas[i].Posicao = pecaSelecionada.Posicao;
-                            pecas[i].Status = pecaSelecionada.Status;
-                            pecas[i].UiElement = pecaSelecionada.UiElement;*/
                         }
                     }
-                    pecaSelecionada = null;
                     emEspera = false;
                     TabuleiroJogo.Children.Clear();
                     DesenharTabuleiro(TabuleiroJogo);
@@ -440,7 +444,6 @@ namespace XadrezWPFCsharp
                         {
                             pecas.Add(new Peca() { Posicao = new Point(i * sizeTabuleiro, j * sizeTabuleiro), Status = true, Nome = "Vazio", Cor = Brushes.Transparent });
                         }
-
                     }
                 }
             }
