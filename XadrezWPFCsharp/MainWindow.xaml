@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XadrezWPFCsharp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="430" Width="400" ContentRendered="Window_ContentRendered" MouseDown="Window_MouseDown">
+        Title="MainWindow" Height="430" Width="400" ContentRendered="Window_ContentRendered">
     <Border BorderBrush="Black">
         <Canvas Name="TabuleiroJogo" ClipToBounds="True" Width="400" Height="400">
         </Canvas>

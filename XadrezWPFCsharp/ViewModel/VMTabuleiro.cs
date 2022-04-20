@@ -21,6 +21,7 @@ namespace XadrezWPFCsharp.ViewModel
         bool emEspera = false;
         Peca pecaSelecionada = new Peca();
         Peca pecaDestino = new Peca();
+        int contadorPecas = 0;
 
         int sizeTabuleiro = 48;
         BitmapImage peaoGray = new BitmapImage(new Uri("Pictures/peaoGray.png", UriKind.Relative));
@@ -90,6 +91,7 @@ namespace XadrezWPFCsharp.ViewModel
             {
                 foreach (Peca peca in pecas)
                 {
+                    contadorPecas++;
                     if (peca.UiElement == null)
                     {
                         if ((peca.Nome == "P") && peca.Status == true)
@@ -100,38 +102,30 @@ namespace XadrezWPFCsharp.ViewModel
                                 img.Source = peaoGray;
                                 peca.UiElement = new Button()
                                 {
-                                    
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
                                     Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Red
+                                    Foreground = Brushes.Red,
+                                    DataContext = peca
 
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
                             else
                             {
+                                Image img = new Image();
+                                img.Source = peaoBege;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = peaoBege,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "P",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Green
+                                    Foreground = Brushes.Green,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
                         }
 
@@ -139,39 +133,33 @@ namespace XadrezWPFCsharp.ViewModel
                         {
                             if (peca.Cor == Brushes.Gray)
                             {
+                                Image img = new Image();
+                                img.Source = torreGray;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = torreGray,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "T",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Red
+                                    Foreground = Brushes.Red,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
                             else
                             {
+                                Image img = new Image();
+                                img.Source = torreBege;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = torreBege,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "T",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Green
+                                    Foreground = Brushes.Green,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
 
                         }
@@ -180,39 +168,33 @@ namespace XadrezWPFCsharp.ViewModel
                         {
                             if (peca.Cor == Brushes.Gray)
                             {
+                                Image img = new Image();
+                                img.Source = bispoGray;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = bispoGray,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "B",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Red
+                                    Foreground = Brushes.Red,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
                             else
                             {
+                                Image img = new Image();
+                                img.Source = bispoBege;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = bispoBege,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "B",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Green
+                                    Foreground = Brushes.Green,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
 
                         }
@@ -221,79 +203,66 @@ namespace XadrezWPFCsharp.ViewModel
                         {
                             if (peca.Cor == Brushes.Gray)
                             {
+                                Image img = new Image();
+                                img.Source = cavaloGray;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = cavaloGray,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "C",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Red
+                                    Foreground = Brushes.Red,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
                             else
                             {
+                                Image img = new Image();
+                                img.Source = cavaloBege;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = cavaloBege,                                    
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "C",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Green
+                                    Foreground = Brushes.Green,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
-
                             }
                         }
                         if ((peca.Nome == "RE") && peca.Status == true)
                         {
                             if (peca.Cor == Brushes.Gray)
                             {
+                                Image img = new Image();
+                                img.Source = reiGray;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = reiGray,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "RE",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Red
+                                    Foreground = Brushes.Red,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
                             else
                             {
+                                Image img = new Image();
+                                img.Source = reiBege;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = reiBege,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "RE",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Green
+                                    Foreground = Brushes.Green,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
 
                         }
@@ -301,43 +270,39 @@ namespace XadrezWPFCsharp.ViewModel
                         {
                             if (peca.Cor == Brushes.Gray)
                             {
+                                Image img = new Image();
+                                img.Source = rainhaGray;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = rainhaGray,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "RA",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Red
+                                    Foreground = Brushes.Red,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
                             else
                             {
+                                Image img = new Image();
+                                img.Source = rainhaBege;
                                 peca.UiElement = new Button()
                                 {
-                                    //Source = rainhaBege,
+                                    TabIndex = contadorPecas,
                                     Width = sizeTabuleiro,
                                     Height = sizeTabuleiro,
-                                    Content = "RA",
+                                    Content = img,
                                     Background = Brushes.Transparent,
-                                    Foreground = Brushes.Green
+                                    Foreground = Brushes.Green,
+                                    DataContext = peca
                                 };
-
-                                if (peca.UiElement is Button)
-                                {
-                                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
-
-                                }
                             }
-
                         }
                     }
+
+                    (peca.UiElement as Button).Click += VMTabuleiro_Click;
+
                     canvas.Children.Add(peca.UiElement);
                     Canvas.SetTop(peca.UiElement, peca.Posicao.Y);
                     Canvas.SetLeft(peca.UiElement, peca.Posicao.X);
@@ -350,9 +315,150 @@ namespace XadrezWPFCsharp.ViewModel
 
         }
 
-        private void VMTabuleiro_Click(object sender, RoutedEventArgs e)
+        public void VMTabuleiro_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Button iButton = (Button)sender;
+            var pecaClick = iButton.DataContext;
+            var pecaRecuperada = pecaClick as Peca;
+            if (!emEspera)
+            {
+                foreach (Peca peca in pecas)
+                {
+                    if (pecaRecuperada.Posicao == peca.Posicao)
+                    {
+                        pecaSelecionada = pecaRecuperada;
+                        emEspera = true;
+                    }
+                }
+            }
+            else
+            {
+                if (pecaRecuperada.Cor != pecaSelecionada.Cor)
+                {
+                    for(int i = 0; i < pecas.Count; i++)
+                    {
+                        if (pecaSelecionada.Posicao == pecas[i].Posicao)
+                            pecas[i] = pecaSelecionada;
+                    }
+                    emEspera = false;
+                    
+                }
+            }
+
+            /*if (!emEspera)
+            {
+                Point pecaClick = new Point();
+
+                foreach (Peca peca in pecas)
+                {
+                    if ((peca.Posicao.X == 5) && (peca.Posicao.Y == 5))
+                    {
+                        pecaClick = e.  //GetPosition(peca as IInputElement);
+                    }
+                }
+
+                for (int i = 0; i < pecas.Count; i++)
+                {
+                    if (pecas[i].Posicao == pecaClick)
+                    {
+                        pecaSelecionada.Posicao = pecas[i].Posicao;
+                        emEspera = true;
+                    }
+                }
+            }
+            else
+            {
+                Point click = new Point();
+
+                foreach (Peca peca in pecas)
+                {
+                    if ((peca.Posicao.X == 0) && (peca.Posicao.Y == 0))
+                    {
+                        click = e.GetPosition(peca as IInputElement);
+                    }
+                }
+
+                for (int i = 0; i < pecas.Count; i++)
+                {
+                    if (pecas[i].Posicao == click)
+                    {
+                        pecaDestino = pecas[i];
+                    }
+                }
+
+                if (pecaDestino == null)
+                {
+                    switch (pecaSelecionada.Nome)
+                    {
+                        case "P":
+                            for (int i = 0; i < pecas.Count; i++)
+                            {
+                                if (pecaSelecionada.Posicao == pecas[i].Posicao)
+                                {
+                                    pecas[i].Posicao = click;
+                                }
+                            }
+                            emEspera = false;
+                            PosicionarPecas(canva);
+                            break;
+                        case "T":
+                            for (int i = 0; i < pecas.Count; i++)
+                            {
+                                if (pecaSelecionada.Posicao == pecas[i].Posicao)
+                                {
+                                    pecas[i].Posicao = click;
+                                }
+                            }
+                            emEspera = false;
+                            PosicionarPecas(canva);
+                            break;
+                        case "C":
+                            for (int i = 0; i < pecas.Count; i++)
+                            {
+                                if (pecaSelecionada.Posicao == pecas[i].Posicao)
+                                {
+                                    pecas[i].Posicao = click;
+                                }
+                            }
+                            emEspera = false;
+                            PosicionarPecas(canva);
+                            break;
+                        case "B":
+                            for (int i = 0; i < pecas.Count; i++)
+                            {
+                                if (pecaSelecionada.Posicao == pecas[i].Posicao)
+                                {
+                                    pecas[i].Posicao = click;
+                                }
+                            }
+                            emEspera = false;
+                            PosicionarPecas(canva);
+                            break;
+                        case "RE":
+                            for (int i = 0; i < pecas.Count; i++)
+                            {
+                                if (pecaSelecionada.Posicao == pecas[i].Posicao)
+                                {
+                                    pecas[i].Posicao = click;
+                                }
+                            }
+                            emEspera = false;
+                            PosicionarPecas(canva);
+                            break;
+                        case "RA":
+                            for (int i = 0; i < pecas.Count; i++)
+                            {
+                                if (pecaSelecionada.Posicao == pecas[i].Posicao)
+                                {
+                                    pecas[i].Posicao = click;
+                                }
+                            }
+                            emEspera = false;
+                            PosicionarPecas(canva);
+                            break;
+                    }
+                }
+            }*/
         }
 
         private void AtribuiIcones()
@@ -398,6 +504,7 @@ namespace XadrezWPFCsharp.ViewModel
                                     Height = sizeTabuleiro,
                                     Content = "",
                                     Background = Brushes.Transparent,
+                                    DataContext = peca
                                 },
                                 Posicao = new Point(i * sizeTabuleiro, j * sizeTabuleiro),
                                 Status = true
@@ -431,7 +538,7 @@ namespace XadrezWPFCsharp.ViewModel
                 {
                     if (pecas[i].Posicao == pecaClick)
                     {
-                        pecaSelecionada = pecas[i];
+                        pecaSelecionada.Posicao = pecas[i].Posicao;
                         emEspera = true;
                     }
                 }
